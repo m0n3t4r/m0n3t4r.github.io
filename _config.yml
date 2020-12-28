@@ -1,16 +1,31 @@
-# Site settings
-title: Mauricio Urraco
-description: Jekyll Theme Minimal Resume
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+title: jekyll-rtd-theme
+description: Just another documentation theme compatible with GitHub Pages
 
-# User settings
-username: m0n3t4r
-user_description: NGU2Zjc0Njg2OTZlNjc1ZjUyNjk2NzY4NzQyYzRlNmY3NDY4Njk2ZTY3NWY0YzY1NjY3NDJl
-user_title: m0n3t4r
-email: w11dhunt4r@gmail.com
-# twitter_username: lorem_ipsum
-# github_username:  lorem_ipsum
-# gplus_username:  lorem_ipsum
+theme: null
 
-exclude: ['package.json', 'src' , 'node_modules']
+# debug:
+#   compress: true
+#   dist: false
+#   shortcodes: true
+
+readme_index:
+  with_frontmatter: true
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+
+exclude:
+  - Makefile
+  - CNAME
+  - LICENSE
+  - update.sh
+  - Gemfile
+  - Gemfile.lock
+  - requirements.txt
+  - node_modules
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - jekyll-rtd-theme.gemspec

@@ -1,93 +1,100 @@
-# Jekyll Resume Theme
+# jekyll-rtd-theme
 
-Live demo at https://jekyll-theme-minimal-resume.netlify.com/
+![CI](https://github.com/rundocs/jekyll-rtd-theme/workflows/CI/badge.svg?branch=develop)
+![jsDelivr](https://data.jsdelivr.com/v1/package/gh/rundocs/jekyll-rtd-theme/badge)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/24d80ae8-c3d9-4645-a6d8-9e97fc8dec3c/deploy-status)](https://app.netlify.com/sites/jekyll-theme-minimal-resume/deploys)
+Just another documentation theme compatible with GitHub Pages
 
-# Stack
+## What it does?
 
-![](https://img.shields.io/badge/jekyll-✓-blue.svg)
-![](https://img.shields.io/badge/html5-✓-blue.svg)
-![](https://img.shields.io/badge/sass-✓-blue.svg)
-![](https://img.shields.io/badge/sweet--scroll-✓-blue.svg)
-![](https://img.shields.io/badge/particle--js-✓-blue.svg)
-![](https://img.shields.io/badge/font--awesome-✓-blue.svg)
-![](https://img.shields.io/badge/devicon-✓-blue.svg)
-![](https://img.shields.io/badge/gulp-✓-blue.svg)
+This theme is inspired by [sphinx-rtd-theme](https://github.com/readthedocs/sphinx_rtd_theme) and refactored with:
 
-***
+- [@primer/css](https://github.com/primer/css)
+- [github-pages](https://github.com/github/pages-gem) ([dependency versions](https://pages.github.com/versions/))
 
-<h3 align="center">Please help this repo with a :star: if you find it useful! :blush:</h3>
+## Quick start
 
-***
-
-# Screenshot
-
-<p align="center">
-  <img src="https://github.com/murraco/jekyll-theme-minimal-resume/blob/master/screenshot.png" width="90%" />
-</p>
-
-# Quick Setup
-
-1. Install Jekyll: `gem install jekyll bundler`
-2. Fork this repository and clone your fork
-3. Edit `_config.yml` to personalize your site
-
-# Settings
-
-You have to fill some informations on `_config.yml` to customize your site:
-
-## Site settings
 ```yml
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
+remote_theme: rundocs/jekyll-rtd-theme
 ```
 
-## User settings
+You can [generate](https://github.com/rundocs/starter-slim/generate) with the same files and folders from [rundocs/starter-slim](https://github.com/rundocs/starter-slim/)
+
+## Usage
+
+Documentation that can guide how to create with Github pages, please refer to [rundocs.io](https://rundocs.io) for details
+
+## Features
+
+- Shortcodes (Toasts card, mermaid)
+- Pages Plugins (emoji, gist, avatar, mentions)
+- Auto generate sidebar
+- [Attribute List Definitions](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions) (Primer/css utilities, Font Awesome 4)
+- Service worker (caches)
+- SEO (404, robots.txt, sitemap.xml)
+- Canonical Link (Open Graph, Twitter Card, Schema data)
+
+## Options
+
+| name          | default value        | description       |
+| ------------- | -------------------- | ----------------- |
+| `title`       | repo name            |                   |
+| `description` | repo description     |                   |
+| `url`         | user domain or cname |                   |
+| `baseurl`     | repo name            |                   |
+| `lang`        | `en`                 |                   |
+| `direction`   | `auto`               | `ltr` or `rtl`    |
+| `highlighter` | `rouge`              | Cannot be changed |
+
 ```yml
-username: Lorem Ipsum
-user_description: Software Engineer at Lorem Ipsum Dolor
-user_title: Mauricio Urraco
-email: mauriurraco@gmail.com
+# folders sort
+readme_index:
+  with_frontmatter: true
+
+meta:
+  key1: value1
+  key2: value2
+  .
+  .
+  .
+
+google:
+  gtag:
+  adsense:
+
+mathjax: # this will prased to json, default: {}
+
+mermaid:
+  custom:     # mermaid link
+  initialize: # this will prased to json, default: {}
+
+scss:   # also _includes/extra/styles.scss
+script: # also _includes/extra/script.js
+
+translate:
+  # shortcodes
+  danger:
+  note:
+  tip:
+  warning:
+  # 404
+  not_found:
+  # copyright
+  revision:
+  # search
+  searching:
+  search:
+  search_docs:
+  search_results:
+  search_results_found: # the "#" in this translate will replaced with results size!
+  search_results_not_found:
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
 ```
 
-> Don't forget to change your URL before you deploy your site!
+## The license
 
-# Color and Particle Customization
-
-- Color Customization
-  - Edit the `.sass` variables
-- Particle Customization
-  - Edit the json data in particle function in `app.js`
-  - Refer to `Particle.js` for help
-
-# Content
-
-You can (and should) edit the `.html` files for adding your own information, icons, working experience, social links or whatever you want to add. I.e.:
-
-```html
-<a aria-label="My Github" target="_blank" href="https://github.com/murraco">
-  <i class="icon fa fa-github-alt" aria-hidden="true"></i>
-</a>
-```
-
-# Running locally
-
-In order to compile the assets and run `Jekyll` locally you need to follow those steps:
-
-1. Install Jekyll
-2. Run `bundle install`
-3. Run `bundle exec jekyll build`
-4. Start and http-server in the folder `_site`
-
-# Contribution
-
-- Report issues
-- Open pull request with improvements
-- Spread the word
-- Reach out to me directly at <mauriurraco@gmail.com>
-
-# Credits
-
-- [Nathan Randecker](https://github.com/nrandecker)
+The theme is available as open source under the terms of the MIT License
