@@ -1,12 +1,12 @@
 # Basic
-title: 潘柏信
-subtitle: 个人站
-description: 欢迎来到我的个人站~
+title: m0n3t4r
+subtitle: 'NULL'
+description: NGU2Zjc0Njg2OTZlNjc1ZjUyNjk2NzY4NzQyYzRlNmY3NDY4Njk2ZTY3NWY0YzY1NjY3NDJl
 # 头像里面的标题
-avatarTitle: leopardpan
+avatarTitle: m0n3t4r
 # 头像里面的描述
-avatarDesc: iOS / 机器学习
-url: "https://leopardpan.cn"
+avatarDesc: 学习记录 
+url: "https://m0n3t4r.github.io"
 
 # 博客是否自动生成目录，false为不生成
 enableToc: true
